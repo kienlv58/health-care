@@ -1,0 +1,29 @@
+@import "../../../styles/colors.module";
+.btn {
+  display: flex;
+  button {
+    background: linear-gradient(32.95deg, #ffcc21 8.75%, #ff963c 86.64%);
+    padding: 14px 40px;
+    border-radius: 4px;
+    min-height: 56px;
+    margin: auto;
+    color: $light;
+    font-family: "Hiragino Kaku Gothic Pro";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+// mobile
+@media screen and (max-width: 767px) {
+  .btn {
+    button {
+      min-height: 40px;
+      padding: 14px 20px;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}

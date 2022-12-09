@@ -1,0 +1,37 @@
+@import "../../../styles/colors.module";
+
+.category {
+  justify-content: space-around;
+  display: flex;
+  padding: 0 80px;
+  margin: 22px;
+  flex-wrap: wrap;
+  .item {
+    background-image: url("../../../asserts/icons/category_bg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    color: $light;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: "Inter";
+    cursor: pointer;
+
+    img {
+      width: 56px;
+      height: 56px;
+    }
+  }
+}
+
+// mobile
+@media screen and (max-width: 767px) {
+  .category {
+    padding: 0;
+  }
+}

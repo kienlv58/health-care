@@ -1,0 +1,66 @@
+{
+  "percent": 75,
+  "date": "2022-05-12",
+  "bodyIndicators": [
+    {
+      "title": "6 月",
+      "weight": 10,
+      "fat": 10
+    },
+    {
+      "title": "7 月",
+      "weight": 9,
+      "fat": 9.5
+    },
+    {
+      "title": "8 月",
+      "weight": 8,
+      "fat": 7
+    },
+    {
+      "title": "9 月",
+      "weight": 7,
+      "fat": 8
+    },
+    {
+      "title": "10 月",
+      "weight": 6,
+      "fat": 6.5
+    },
+    {
+      "title": "11 月",
+      "weight": 5,
+      "fat": 7
+    },
+    {
+      "title": "12 月",
+      "weight": 4,
+      "fat": 6
+    },
+    {
+      "title": "1 月",
+      "weight": 3,
+      "fat": 5.5
+    },
+    {
+      "title": "2 月",
+      "weight": 3.5,
+      "fat": 4
+    },
+    {
+      "title": "3 月",
+      "weight": 4.5,
+      "fat": 4.7
+    },
+    {
+      "title": "4 月",
+      "weight": 4,
+      "fat": 3
+    },
+    {
+      "title": "5 月",
+      "weight": 5,
+      "fat": 4.7
+    }
+  ]
+}

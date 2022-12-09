@@ -1,0 +1,44 @@
+{
+  "histories": [
+    {
+      "id": 1,
+      "date": "2022-05-21",
+      "category": "Morning"
+    },
+    {
+      "id": 2,
+      "date": "2022-05-21",
+      "category": "Lunch"
+    },
+    {
+      "id": 3,
+      "date": "2022-05-21",
+      "category": "Dinner"
+    },
+    {
+      "id": 4,
+      "date": "2022-05-21",
+      "category": "Snack"
+    },
+    {
+      "id": 5,
+      "date": "2022-05-21",
+      "category": "Morning"
+    },
+    {
+      "id": 6,
+      "date": "2022-05-21",
+      "category": "Lunch"
+    },
+    {
+      "id": 7,
+      "date": "2022-05-21",
+      "category": "Dinner"
+    },
+    {
+      "id": 8,
+      "date": "2022-05-21",
+      "category": "Snack"
+    }
+  ]
+}
