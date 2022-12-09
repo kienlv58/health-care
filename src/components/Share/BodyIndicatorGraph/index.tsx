@@ -10,6 +10,7 @@ import {
   Legend,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
+import React from "react";
 
 ChartJS.register(
   CategoryScale,
@@ -82,9 +83,13 @@ interface Props {
 const BodyIndicatorGraph = ({ bodyIndicators }: Props) => {
   return (
     <div className={styles.graph}>
-      <Line options={options} data={genData(bodyIndicators)} />
+      <Line
+        key={Math.random()}
+        options={options}
+        data={genData(bodyIndicators)}
+      />
     </div>
   );
 };
 
-export default BodyIndicatorGraph;
+export default React.memo(BodyIndicatorGraph);

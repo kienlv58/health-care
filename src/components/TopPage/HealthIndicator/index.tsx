@@ -1,5 +1,5 @@
 import AchievementRate from "../AchievementRate";
-import BodyIndicatorGraph from "../BodyIndicatorGraph";
+import BodyIndicatorGraph from "../../Share/BodyIndicatorGraph";
 import styles from "./HealthIndicator.module.scss";
 
 interface Props {
