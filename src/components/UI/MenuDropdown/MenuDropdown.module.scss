@@ -1,0 +1,64 @@
+.menu {
+  background-color: transparent;
+  margin-left: 35px;
+  margin-right: 10px;
+  position: relative;
+  .btn-menu {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .menu-item {
+    min-height: 72px;
+    min-width: 250px;
+    background-color: #777777;
+    font-family: "Hiragino Kaku Gothic Pro";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+    color: #fff;
+    padding: 0px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .div-line {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
+  .dropdown {
+    margin: 0;
+    position: absolute;
+    right: 0;
+    left: auto;
+    box-shadow: 0 10px 15px -3px rgba(46, 41, 51, 0.08),
+      0 4px 6px -2px rgba(71, 63, 79, 0.16);
+    font-size: 0.875rem;
+    z-index: 9999;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    list-style: none;
+    background-color: #777777;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+}
+
+// mobile
+@media screen and (max-width: 767px) {
+  .menu {
+    .menu-item {
+      font-size: 12px;
+      line-height: 28px;
+      min-height: 40px;
+      min-width: 180px;
+    }
+  }
+}
