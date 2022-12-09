@@ -1,0 +1,39 @@
+@import "./styles/_colors.module";
+
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"),
+    url("./asserts/fonts/Inter-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NotoSansJP";
+  src: local("NotoSansJP"),
+    url("./asserts/fonts/NotoSansJP-Regular.otf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "NotoSansJP",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $base-bg-color;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+button {
+  padding: 0px;
+  border: none;
+  cursor: pointer;
+}
