@@ -6,12 +6,17 @@ import Layout from "./components/UI/Layout";
 import SuspenseWrapper from "./components/navigations/SuspenseWrapper";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
+import React from "react";
+
+const TopPage = React.lazy(() => import("./pages/TopPage"));
+const MyRecordPage = React.lazy(() => import("./pages/MyRecordPage"));
+const ColumnPage = React.lazy(() => import("./pages/ColumnPage"));
+const LoginPage = React.lazy(() => import("./pages/LoginPage"));
+const NotFoundPage = React.lazy(() => import("./pages/NotFoundPage"));
 
 function App() {
   const authContext = useContext(AuthContext);
-  const homePagePath = authContext.isLogin
-    ? "pages/TopPage"
-    : "pages/ColumnPage";
+  const HomePage = authContext.isLogin ? TopPage : ColumnPage;
 
   return (
     <Routes>
@@ -19,28 +24,52 @@ function App() {
         <Route
           index
           path={RouterMap.HOME}
-          element={<SuspenseWrapper path={homePagePath} />}
+          element={
+            <SuspenseWrapper>
+              <HomePage />
+            </SuspenseWrapper>
+          }
         />
         <Route
           index
           path={RouterMap.TOP}
-          element={<SuspenseWrapper isProtected path="pages/TopPage" />}
+          element={
+            <SuspenseWrapper isProtected>
+              <HomePage />
+            </SuspenseWrapper>
+          }
         />
         <Route
           path={RouterMap.RECORD}
-          element={<SuspenseWrapper isProtected path="pages/MyRecordPage" />}
+          element={
+            <SuspenseWrapper isProtected>
+              <MyRecordPage />
+            </SuspenseWrapper>
+          }
         />
         <Route
           path={RouterMap.COLUMN}
-          element={<SuspenseWrapper path="pages/ColumnPage" />}
+          element={
+            <SuspenseWrapper>
+              <ColumnPage />
+            </SuspenseWrapper>
+          }
         />
         <Route
           path={RouterMap.LOGIN}
-          element={<SuspenseWrapper path="pages/LoginPage" />}
+          element={
+            <SuspenseWrapper>
+              <LoginPage />
+            </SuspenseWrapper>
+          }
         />
         <Route
           path={RouterMap.NOT_FOUND}
-          element={<SuspenseWrapper path="pages/NotFoundPage" />}
+          element={
+            <SuspenseWrapper>
+              <NotFoundPage />
+            </SuspenseWrapper>
+          }
         />
       </Route>
     </Routes>

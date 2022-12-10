@@ -1,29 +1,21 @@
-import React, { Suspense } from "react";
+import { ReactNode, Suspense } from "react";
 import Loading from "../../UI/Loading";
 import ProtectedRoute from "../ProtectedRoute";
 interface SuspenseWrapperProps {
-  path: string;
   isProtected?: boolean;
+  children: ReactNode;
 }
 
 const SuspenseWrapper = (props: SuspenseWrapperProps) => {
-  const LazyComponent = React.lazy(() => import(`../../../${props.path}`));
-
   if (props.isProtected) {
     return (
       <ProtectedRoute>
-        <Suspense fallback={<Loading />}>
-          <LazyComponent />
-        </Suspense>
+        <Suspense fallback={<Loading />}>{props.children}</Suspense>
       </ProtectedRoute>
     );
   }
 
-  return (
-    <Suspense fallback={<Loading />}>
-      <LazyComponent />
-    </Suspense>
-  );
+  return <Suspense fallback={<Loading />}>{props.children}</Suspense>;
 };
 
 export default SuspenseWrapper;
