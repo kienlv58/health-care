@@ -26,7 +26,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link className={styles.item} to={RouteMap.HOME}>
+              <Link className={styles.item} to={"#"}>
                 <img
                   src={icon_challenge}
                   className={styles.icon}
@@ -36,7 +36,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link className={styles.item} to={RouteMap.HOME}>
+              <Link className={styles.item} to={"#"}>
                 <div className={styles["noti-record"]}>
                   <div className={styles.notification}>1</div>
                   <img src={icon_info} className={styles.icon} alt="お知らせ" />

@@ -3,6 +3,8 @@ const RouteMap = {
   TOP: "/top",
   RECORD: "/record",
   COLUMN: "/column",
+  LOGIN: "/login",
+  LOGOUT: "/logout",
   NOT_FOUND: "*",
 };
 

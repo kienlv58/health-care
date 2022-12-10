@@ -47,5 +47,9 @@
                 "skipComments": true
             }
         ]
-    }
+    },
+    "ignorePatterns": [
+        "**/*.json",
+        "**/*.scss"
+    ]
 }

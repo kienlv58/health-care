@@ -4,7 +4,7 @@ import { forwardRef, useState } from "react";
 import useBodyIndicatorData from "src/hooks/useBodyIncatorData";
 import { DURATION_TYPE } from "src/services/http-client";
 
-const BodyRecordGraph = forwardRef<HTMLDivElement, {}>(({}, ref) => {
+const BodyRecordGraph = forwardRef<HTMLDivElement>((_, ref) => {
   const [durationType, setDurationType] = useState<DURATION_TYPE>(
     DURATION_TYPE.MONTH,
   );
