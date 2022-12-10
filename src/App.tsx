@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import RouterMap from "./utils/route-map";
 import Layout from "./components/UI/Layout";
-import SuspenseWrapper from "./components/navigations/SuspenseWrapper";
+import SuspenseWrapper from "./components/Navigations/SuspenseWrapper";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
 import React from "react";
