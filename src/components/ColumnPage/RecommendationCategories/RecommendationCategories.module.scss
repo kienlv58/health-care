@@ -1,0 +1,96 @@
+@import "../../../styles/colors.module";
+.rec-categories {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  margin: auto;
+  .item {
+    width: 25%;
+    width: 25%;
+    padding: 20px;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+    .btn {
+      width: 100%;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 27px;
+      text-align: center;
+      letter-spacing: 0.11px;
+      color: #ffcc21;
+      background-color: #2e2e2e;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      padding: 30px;
+      min-height: 150px;
+      .row {
+        width: 56px;
+        height: 2px;
+        background-color: rgba(0, 0, 0, 0.0001);
+        border: 1px solid #ffffff;
+        margin: 10px;
+      }
+      .sub-title {
+        font-family: "Hiragino Kaku Gothic Pro";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 26px;
+        text-align: center;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+// tablet
+@media screen and (max-width: 992px) {
+  .rec-categories {
+    .item {
+      padding: 8px;
+    }
+    &:first-child {
+      padding-left: 4px;
+    }
+    &:last-child {
+      padding-right: 4px;
+    }
+  }
+}
+
+// mobile
+@media screen and (max-width: 767px) {
+  .rec-categories {
+    .item {
+      width: 50%;
+      padding: 4px;
+      &:first-child {
+        padding-left: 4px;
+      }
+      &:last-child {
+        padding-right: 4px;
+      }
+      .btn {
+        .title {
+          font-size: 15px;
+          line-height: 18px;
+        }
+        .sub-title {
+          font-size: 11px;
+          line-height: 16px;
+          padding: 2px 2px;
+          margin: 0px 5px;
+        }
+      }
+    }
+  }
+}

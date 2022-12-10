@@ -3,6 +3,7 @@ import mealHistoriesData from "./dummy-data/meal-histories.json";
 import healIndicatorData from "./dummy-data/health-indicator.json";
 import myExerciseData from "./dummy-data/my-exercise.json";
 import myDiaryData from "./dummy-data/my-diary.json";
+import recommendationColumnData from "./dummy-data/recommendation-column.json";
 
 export enum DURATION_TYPE {
   DAY = "DAY",
@@ -84,6 +85,16 @@ export const getMyDiary = async (): Promise<MyDiary[]> => {
   return new Promise<MyDiary[]>((resolve) => {
     setTimeout(() => {
       resolve(myDiaryData);
+    }, 0);
+  });
+};
+
+export const getRecommendationColumn = async (): Promise<
+  RecommendationColumn[]
+> => {
+  return new Promise<RecommendationColumn[]>((resolve) => {
+    setTimeout(() => {
+      resolve(recommendationColumnData);
     }, 0);
   });
 };

@@ -32,3 +32,11 @@ interface MyDiary {
   content: string;
   date: string;
 }
+
+interface RecommendationColumn {
+  id: number;
+  image?: string;
+  date: string;
+  description: string;
+  tags: string[];
+}
