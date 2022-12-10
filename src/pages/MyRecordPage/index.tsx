@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import useMyRecordData from "src/hooks/useMyRecordData";
 import BodyRecordGraph from "../../components/RecordPage/BodyRecordGraph";
 import MyDiary from "../../components/RecordPage/MyDiary";
 import MyExercise from "../../components/RecordPage/MyExercise";
@@ -9,6 +10,8 @@ const MyRecordPage = () => {
   const recordGraphRef = useRef<HTMLDivElement>(null);
   const myExerciseRef = useRef<HTMLDivElement>(null);
   const myDiaryRef = useRef<HTMLDivElement>(null);
+
+  const { myExercise, myDiary } = useMyRecordData();
 
   const scrollToComponent = (id: number) => {
     switch (id) {
@@ -28,8 +31,8 @@ const MyRecordPage = () => {
     <div className={styles.container}>
       <RecordCategories scrollToComponent={scrollToComponent} />
       <BodyRecordGraph ref={recordGraphRef} />
-      <MyExercise ref={myExerciseRef} />
-      <MyDiary ref={myDiaryRef} />
+      <MyExercise ref={myExerciseRef} myExercise={myExercise} />
+      <MyDiary ref={myDiaryRef} myDiary={myDiary} />
     </div>
   );
 };

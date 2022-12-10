@@ -1,6 +1,8 @@
 // import healIndicatorData from "./dummy-data/health-indicator.json";
 import mealHistoriesData from "./dummy-data/meal-histories.json";
-const healIndicatorData = require("./dummy-data/health-indicator.json");
+import healIndicatorData from "./dummy-data/health-indicator.json";
+import myExerciseData from "./dummy-data/my-exercise.json";
+import myDiaryData from "./dummy-data/my-diary.json";
 
 export enum DURATION_TYPE {
   DAY = "DAY",
@@ -66,6 +68,22 @@ export const getMealHistories = async (): Promise<MealHistories> => {
   return new Promise<MealHistories>((resolve) => {
     setTimeout(() => {
       resolve(mealHistoriesData);
+    }, 0);
+  });
+};
+
+export const getMyExercise = async (): Promise<MyExercise[]> => {
+  return new Promise<MyExercise[]>((resolve) => {
+    setTimeout(() => {
+      resolve(myExerciseData);
+    }, 0);
+  });
+};
+
+export const getMyDiary = async (): Promise<MyDiary[]> => {
+  return new Promise<MyDiary[]>((resolve) => {
+    setTimeout(() => {
+      resolve(myDiaryData);
     }, 0);
   });
 };

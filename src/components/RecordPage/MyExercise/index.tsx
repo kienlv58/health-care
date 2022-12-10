@@ -1,75 +1,12 @@
+import dayjs from "dayjs";
 import { forwardRef } from "react";
 import styles from "./MyExercise.module.scss";
 
-const exercise = [
-  {
-    id: 1,
-    name: "家事全般（立位・軽い）",
-    energy: 26,
-    duration: 10,
-  },
-  {
-    id: 2,
-    name: "家事全般（立位・軽い）",
-    energy: 26,
-    duration: 10,
-  },
-  {
-    id: 3,
-    name: "家事全般（立位・軽い）",
-    energy: 26,
-    duration: 10,
-  },
-  {
-    id: 4,
-    name: "家事全般（立位・軽い）",
-    energy: 26,
-    duration: 10,
-  },
-  {
-    id: 5,
-    name: "家事全般（立位・軽い）",
-    energy: 26,
-    duration: 10,
-  },
-  {
-    id: 6,
-    name: "家事全般（立位・軽い）",
-    energy: 26,
-    duration: 10,
-  },
-  {
-    id: 11,
-    name: "家事全般（立位・軽い）",
-    energy: 26,
-    duration: 10,
-  },
-  {
-    id: 7,
-    name: "家事全般（立位・軽い）",
-    energy: 26,
-    duration: 10,
-  },
-  {
-    id: 8,
-    name: "家事全般（立位・軽い）",
-    energy: 26,
-    duration: 10,
-  },
-  {
-    id: 9,
-    name: "家事全般（立位・軽い）",
-    energy: 26,
-    duration: 10,
-  },
-  {
-    id: 10,
-    name: "家事全般（立位・軽い）",
-    energy: 26,
-    duration: 10,
-  },
-];
-const MyExercise = forwardRef<HTMLDivElement, {}>(({}, ref) => {
+interface Props {
+  myExercise: MyExercise[];
+}
+
+const MyExercise = forwardRef<HTMLDivElement, Props>(({ myExercise }, ref) => {
   return (
     <div ref={ref} className={styles["my-exercise"]}>
       <div className={styles.header}>
@@ -77,10 +14,12 @@ const MyExercise = forwardRef<HTMLDivElement, {}>(({}, ref) => {
           <div>MY</div>
           <div>EXERCISE</div>
         </div>
-        <div className={styles.date}>2021.05.21</div>
+        <div className={styles.date}>
+          {dayjs("2021-05-21").format("YYYY.MM.DD")}
+        </div>
       </div>
       <div className={styles["list-exercise"]}>
-        {exercise.map(({ id, name, energy, duration }) => (
+        {myExercise.map(({ id, name, energy, duration }) => (
           <div key={id} className={styles.item}>
             <div className={styles.container}>
               <div className={styles["main-content"]}>

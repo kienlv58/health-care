@@ -1,16 +1,21 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { getHealthIndicator } from "src/services/http-client";
+import { getMyExercise, getMyDiary } from "src/services/http-client";
 const useMyRecordData = () => {
-  const [bodyIndicators, setBodyIndicators] = useState<BodyIndicator[]>([]);
+  const [myExercise, setMyExercise] = useState<MyExercise[]>([]);
+  const [myDiary, setMyDiary] = useState<MyDiary[]>([]);
 
   useEffect(() => {
-    getHealthIndicator().then((data) => {
-      setBodyIndicators(data.bodyIndicators);
+    getMyExercise().then((data) => {
+      setMyExercise(data);
+    });
+
+    getMyDiary().then((data) => {
+      setMyDiary(data);
     });
   }, []);
 
-  return { bodyIndicators };
+  return { myExercise, myDiary };
 };
 
 export default useMyRecordData;

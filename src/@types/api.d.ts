@@ -19,3 +19,16 @@ interface MealHistoryItem {
 interface MealHistories {
   histories: MealHistoryItem[];
 }
+
+interface MyExercise {
+  id: number;
+  name: string;
+  energy: number;
+  duration: number;
+}
+interface MyDiary {
+  id: number;
+  title: string;
+  content: string;
+  date: string;
+}

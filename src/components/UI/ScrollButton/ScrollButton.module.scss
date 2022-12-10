@@ -1,0 +1,18 @@
+.scroll-btn {
+  position: fixed;
+  width: 48px;
+  height: 48px;
+  right: 50px;
+  bottom: 200px;
+  z-index: 1;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+// mobile
+@media screen and (max-width: 767px) {
+  .scroll-btn {
+    right: 10px;
+    bottom: 40px;
+  }
+}
